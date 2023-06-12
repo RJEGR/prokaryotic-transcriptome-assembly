@@ -42,6 +42,7 @@ For genomes less than about 4 billion nucleotides in length, bowtie2-build build
 ```bash
 
 # (IF) SEGEMEHL
+# (fist install)
 
 segemehl.x -d ref.fa -x ref.idx
 
