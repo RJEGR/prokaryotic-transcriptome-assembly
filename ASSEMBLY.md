@@ -134,3 +134,21 @@ export PATH=$PATH:"/opt/FADU-1.8.3"
 #/opt/TSSpredator-1.1beta.jar
 ```
 
+# 3) Quality transcriptome assessment 
+## 3.1) Output FASTA
+```bash
+..
+```
+## 3.2) BUSCO
+```bash
+
+# Revisar que otras db son utiles: 
+# https://busco-archive.ezlab.org/frame_wget.html
+
+eukaryota_odb9=/PATH_TO_BUSCO_DB/eukaryota_odb9
+bacteria_odb9=/PATH_TO_BUSCO_DB/bacteria_odb9
+
+run_BUSCO.py -i $fasta -l $eukaryota_odb9 -m transcriptome -o ${out}_eukaryota_odb9 -c 24
+
+run_BUSCO.py -i $fasta -l $bacteria_odb9 -m transcriptome -o ${out}_bacteria_odb9 -c 24
+```
